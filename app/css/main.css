@@ -1,0 +1,15 @@
+form {
+  margin: 26px 34px;
+  border: 1px solid #C4C4C4;
+  border-radius: 5px;
+  width: 500px;
+  height: 500px;
+  font-family: sans-serif; }
+  form .header {
+    border-bottom: 1 px solid #2172B6;
+    background-color: #3E8ACC;
+    color: white;
+    padding: 15px;
+    font-size: 22px;
+    font-weight: lighter;
+    vertical-align: center; }

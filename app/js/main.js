@@ -2,22 +2,19 @@
 
 (function () {
 
-  let url = 'http://json-data.herokuapp.com/forms';
+  var url = 'http://json-data.herokuapp.com/forms';
 
   // Fetch data and do something with it
-  let promise = $.getJSON(url);
-  promise.then( function (response) {
+  var promise = $.getJSON(url);
+  promise.then(function (response) {
     doSomething(response);
   });
 
   // Templates
-  let genericInput = function (obj) {
-    let template = `
-    <div class="text-input form-elem"> 
-      <input type="${ obj.type }" placeholder="${ obj.label }" id="${ obj.id }">
-    </div>`;
+  var genericInput = function genericInput(obj) {
+    var template = '\n    <div class="text-input form-elem"> \n      <input type="' + obj.type + '" placeholder="' + obj.label + '" id="' + obj.id + '">\n    </div>';
     return template;
-  }
+  };
 
   // let selectInput = function (obj) {
   //   let template = `
@@ -30,17 +27,13 @@
   //   return template;
   // }
 
-  let textAreaTemplate = function (obj) {
-    let template = `
-    <div class=textAreaDiv>
-      <textarea rows="5" cols="50">${ obj.label }</textarea>
-    </div>`;
+  var textAreaTemplate = function textAreaTemplate(obj) {
+    var template = '\n    <div class=textAreaDiv>\n      <' + obj.type + ' rows="5" cols="50" id=' + obj.id + '>' + obj.label + '</' + obj.type + '>\n    </div>';
     return template;
-  }
-
+  };
 
   // Our "do something" function
-  let doSomething = function(arr) {
+  var doSomething = function doSomething(arr) {
     _.each(arr, function (item) {
       var htmlBlock;
       if (item.type === 'text' || item.type === 'tel' || item.type === 'email') {
@@ -49,51 +42,19 @@
       // else if (item.type === 'select') {
       //   htmlBlock = selectInput(item);
       // }
-      else if (item.type === 'textarea'){
-        htmlBlock = textAreaTemplate(item);
-      }
-      else {
-        alert('We dun gooft');
-      }
+      else if (item.type === 'textarea') {
+          htmlBlock = textAreaTemplate(item);
+        } else {
+          alert('We dun gooft');
+        }
       console.log(htmlBlock);
-      $('form').append(htmlBlock)
+      $('.body').append(htmlBlock);
     });
-  }
+  };
+})();
 
-}());
+// <i class="fa ${ obj.icon }"></i>
 
+// OR
 
-
-
-// let textInput =function (obj){
-//  <div class="text-input">
-//   let template= `
-//   <input type="${type}" placeholder="${label}" id="${id}">
-//     <i class="fa ${ obj.icon}"></i>
-//  </div>
-//   ;
-//   return template;
-// }
-
-// (function () {
-
-  // console.log('It Works!');
-
-// })();
-
-// function info (data){
-// console.log('the info data is', data);
-// }
-
-// $.ajax({
-//   url: 'https://json-data.herokuapp.com/forms',
-//   dataType: 'json',
-//   method: 'get'
-// });
-// $.getJSON( 'https://json-data.herokuapp.com/forms' ).then( function (data) {
-//   console.log(data);
-
-
-
-
-
+// let genericInput = _.template($('#generic-form').text());
