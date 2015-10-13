@@ -31,7 +31,7 @@
   let textAreaTemplate = function (obj) {
     let template = `
     <div class=textAreaDiv>
-      <${ obj.type } rows="5" cols="50" id=${ obj.id }>${ obj.label }</${ obj.type }>
+      <${ obj.type } rows="5" cols="43" id=${ obj.id } placeholder="${obj.label}"></${ obj.type }>
     </div>`;
     return template;
   }

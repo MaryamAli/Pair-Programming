@@ -1,15 +1,53 @@
 form {
   margin: 26px 34px;
   border: 1px solid #C4C4C4;
-  border-radius: 5px;
-  width: 500px;
-  height: 500px;
-  font-family: sans-serif; }
+  border-radius: 3px;
+  width: 425px;
+  height: 540px;
+  font-family: sans-serif;
+  position: relative;
+  font-size: 14px; }
   form .header {
-    border-bottom: 1 px solid #2172B6;
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid #2172B6;
     background-color: #3E8ACC;
     color: white;
-    padding: 15px;
+    padding: 22px;
     font-size: 22px;
     font-weight: lighter;
     vertical-align: center; }
+  form .body {
+    padding: 25px; }
+    form .body input {
+      margin: 5px 0;
+      width: 375px;
+      border-radius: 3px;
+      border: 1px solid #C9CED1;
+      padding: 5px; }
+    form .body textarea {
+      margin: 5px 0;
+      width: 375px;
+      border-radius: 3px;
+      border: 1px solid #C9CED1;
+      padding: 5px;
+      border-color: #C9CED1;
+      resize: none; }
+    form .body select {
+      margin: 5px 0;
+      width: 375px;
+      border-radius: 3px;
+      border: 1px solid #C9CED1;
+      padding: 5px; }
+  form .footer {
+    padding: 30px 25px;
+    background-color: #C9DEF0;
+    position: absolute;
+    bottom: 0;
+    width: 88%;
+    border-radius: 0 0 3px 3px; }
+    form .footer button {
+      background-color: #418BCA;
+      color: white;
+      border-radius: 3px;
+      border: 1px solid #3080C9;
+      padding: 5px; }
