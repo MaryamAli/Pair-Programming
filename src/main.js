@@ -1,3 +1,5 @@
+'use strict';
+
 (function () {
 
   let url = 'http://json-data.herokuapp.com/forms';
